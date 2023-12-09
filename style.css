@@ -207,6 +207,177 @@ section {
     background-color: white;
     color: black;
 }
+/* responsive for index***************************************/
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust the base font size for smaller screens */
+    }
+
+    #desktop-nav {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        height: 10vh;
+    }
+
+    .nav-links {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+    }
+
+    section {
+        margin: 0 1rem;
+    }
+
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .profile-pic {
+        width: 80%;
+        height: auto;
+        margin: 1.5rem auto;
+    }
+
+    .section__text {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-color-1,
+    .btn-color-2 {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-links {
+        font-size: 1.2rem;
+    }
+
+    .section-container {
+        gap: 2rem;
+    }
+
+    .profile-pic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1.75rem;
+    }
+
+    .btn-color-1,
+    .btn-color-2 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+/* Add this at the end of your existing CSS */
+
+/* Larger Tablets */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .nav-links {
+        font-size: 1.5rem;
+    }
+
+    .section-container {
+        gap: 3rem;
+    }
+
+    .profile-pic {
+        width: 350px;
+        height: 350px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .section__text__p2 {
+        font-size: 2rem;
+    }
+
+    .btn-color-1,
+    .btn-color-2 {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+}
+
+/* Small Phones */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Adjust the base font size for smaller screens */
+    }
+
+    #desktop-nav {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        height: 8vh;
+    }
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    section {
+        margin: 0 0.5rem;
+    }
+
+    .section-container {
+        gap: 1rem;
+    }
+
+    .profile-pic {
+        width: 100%;
+        height: auto;
+        margin: 1rem auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-color-1,
+    .btn-color-2 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
 
 /* ****************************** about section***************************************** */
 #about{
