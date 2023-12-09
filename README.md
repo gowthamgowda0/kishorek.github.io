@@ -1,1 +1,1 @@
-# kishorek.github.io
+# kishore.com
