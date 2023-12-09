@@ -4,15 +4,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
 }
 
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFF0;
-}
-
-p {
+    font-size: 16px;
+    line-height: 1.5;
     color: #050404;
 }
 
@@ -29,8 +29,6 @@ p {
     z-index: 1000; 
 }
 
-
-
 #desktop-nav:hover {
     font-size: 2.5rem;
     background-color: #333;
@@ -40,7 +38,7 @@ p {
 .logo {
     font-size: 2rem;
     transition: font-size 300ms ease;
-    height: 20vh;
+    height: 10vh;
 }
 
 #desktop-nav:hover .logo {
@@ -89,56 +87,40 @@ a:hover {
 /* Section Styles */
 section {
     padding-top: 5px;
-    height: 96vh;
-    margin: 0, 10rem;
+    min-height: calc(100vh - 2rem); /* Adjusted for better responsiveness */
+    margin: 0 1rem; /* Adjusted for better responsiveness */
     box-sizing: border-box;
-    min-height: fit-content;
 }
 
-#profile{
-    margin: 70px;
+#profile {
+    margin: 2rem;
 }
 
 .section-container {
     display: flex;
-    gap: 4rem;
-    height: 500px;
-    justify-content: space-around;
-    padding-top: 70px;
+    flex-direction: column; /* Adjusted for better responsiveness */
+    gap: 2rem;
+    align-items: center; /* Adjusted for better responsiveness */
+    justify-content: center;
+    padding-top: 2rem; /* Adjusted for better responsiveness */
 }
 
 /* Profile Picture */
-#profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    height: 80vh;
-}
-
-.about_pic-container{
-    display: flex;
-    align-items: baseline;
-    
-}
-
-.profile-pic{
-    width: 400px; 
-    height: 400px;
+.profile-pic {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border: 2px solid #ccc;
-    border-radius:50%;
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 2.5rem 20px auto 20px;
+    margin: 1rem 0;
     padding: 10px;
-    float: left;
-    flex-shrink: 0;
-    margin-right: 20px;
-    position: relative;
     transition: transform 0.3s ease;
 }
+
 .profile-pic:hover {
     transform: scale(1.1);
-  }
+}
 
 .section__text {
     align-self: center;
@@ -180,20 +162,12 @@ section {
 }
 
 /* Button */
-.btn-color-1, .btn-color-2 {
+.btn-color-1,
+.btn-color-2 {
     font-weight: 700;
     transition: all 300ms ease;
     padding: 12px;
     border-radius: 3rem;
-}
-
-.btn-color-1, .btn-color-2 {
-    border-radius: 10px gray, solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-    cursor: pointer;
 }
 
 .btn-color-1,
@@ -204,82 +178,22 @@ section {
 
 .btn-color-1:hover,
 .btn-color-2:hover {
+    cursor: pointer;
     background-color: white;
     color: black;
 }
-/* Mobile Styles (default) */
-body {
-    font-size: 16px;
-}
-
-#desktop-nav {
-    font-size: 1.5rem;
-}
-
-.logo {
-    font-size: 2rem;
-    height: 10vh;
-}
-
-.nav-links {
-    font-size: 1rem;
-    gap: 1rem;
-}
-
-.nav-links a {
-    padding: 0.5rem;
-}
-
-section {
-    margin: 2rem 1rem;
-}
-
-.profile-pic {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 1.5rem auto;
-}
-
-.title {
-    font-size: 2rem;
-}
-
-.section__text__p2 {
-    font-size: 1.5rem;
-}
-
-.btn-color-1,
-.btn-color-2 {
-    font-size: 1rem;
-    padding: 12px 20px;
-}
-
 /* Tablet Styles */
-@media only screen and (min-width: 769px) {
-    body {
-        font-size: 18px;
-    }
-
-    #desktop-nav {
-        font-size: 1.8rem;
-    }
-
-    .logo {
-        font-size: 3rem;
-        height: 15vh;
-    }
-
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     .nav-links {
         font-size: 1.2rem;
     }
 
-    section {
-        margin: 3rem;
+    .section-container {
+        gap: 2rem;
     }
 
     .profile-pic {
-        max-width: 400px;
+        max-width: 300px;
     }
 
     .title {
@@ -296,44 +210,51 @@ section {
     }
 }
 
-/* Larger Screens */
-@media only screen and (min-width: 1025px) {
+/* Small Phones */
+@media only screen and (max-width: 480px) {
     body {
-        font-size: 20px;
+        font-size: 14px; /* Adjust the base font size for smaller screens */
     }
 
     #desktop-nav {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .logo {
-        font-size: 4rem;
-        height: 20vh;
+        font-size: 1.2rem;
+        height: 8vh;
     }
 
     .nav-links {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     section {
-        margin: 4rem;
+        margin: 0.5rem;
+    }
+
+    .section-container {
+        gap: 1rem;
     }
 
     .profile-pic {
-        max-width: 500px;
+        max-width: 100%;
+        height: auto;
+        margin: 1rem auto;
     }
 
     .title {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .section__text__p2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .btn-color-1,
     .btn-color-2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        padding: 10px;
     }
 }
 
